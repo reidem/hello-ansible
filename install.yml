@@ -1,0 +1,31 @@
+---
+- name: Playbook de instalacion de cosas
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Comprobar conectividad
+      ansible.builtin.ping:
+
+    - name: Instalar apache
+      ansible.builtin.apt:
+        name: apache2
+        state: present
+
+    - name: Instalar mariadb
+      ansible.builtin.apt:
+        name: mariadb-server
+        state: present
+
+    - name: Desinstalar htop
+      ansible.builtin.apt:
+        name: htop
+        state: absent
+
+    - name: Aplicar plantilla apache
+      ansible.builtin.template:
+        src: templates/templateJ2.j2
+        dest: /var/www/html/index.html
+        owner: root
+        group: root
+        mode: '0644'
