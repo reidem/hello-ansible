@@ -29,3 +29,11 @@
         owner: root
         group: root
         mode: '0644'
+    
+    - name: Extraer aplicacion 2048
+      ansible.builtin.unarchive:
+        src: "~/Downloads/2048.zip"
+        dest: "/var/www/html"
+        owner: root
+        group: root
+        mode: '0755'
