@@ -1,6 +1,6 @@
 ---
 - name: Playbook de instalacion de cosas
-  hosts: all
+  hosts: fedora
   become: true
 
   tasks:
@@ -8,17 +8,18 @@
       ansible.builtin.ping:
 
     - name: Instalar apache
-      ansible.builtin.apt:
-        name: apache2
-        state: present
+      ansible.builtin.dnf:
+        name: httpd
+        state: latest
+        update_cache: yes
 
     - name: Instalar mariadb
-      ansible.builtin.apt:
+      ansible.builtin.dnf:
         name: mariadb-server
-        state: present
+        state: latest
 
     - name: Desinstalar htop
-      ansible.builtin.apt:
+      ansible.builtin.dnf:
         name: htop
         state: absent
 
@@ -32,7 +33,7 @@
     
     - name: Extraer aplicacion 2048
       ansible.builtin.unarchive:
-        src: "~/Downloads/2048.zip"
+        src: "~/Downloads/2048.tar.bz2"
         dest: "/var/www/html"
         owner: root
         group: root
