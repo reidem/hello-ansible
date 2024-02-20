@@ -1,6 +1,6 @@
 ---
 - name: Playbook de instalacion de cosas
-  hosts: all
+  hosts: debian_group
   become: true
 
   tasks:
@@ -11,6 +11,7 @@
       ansible.builtin.apt:
         name: apache2
         state: present
+        update_cache: true
 
     - name: Instalar mariadb
       ansible.builtin.apt:
@@ -32,7 +33,7 @@
     
     - name: Extraer aplicacion 2048
       ansible.builtin.unarchive:
-        src: "~/Downloads/2048.zip"
+        src: "~/Downloads/2048.tar.bz2"
         dest: "/var/www/html"
         owner: root
         group: root

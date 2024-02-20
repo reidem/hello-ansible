@@ -1,6 +1,6 @@
 ---
 - name: Playbook de instalacion de cosas
-  hosts: fedora
+  hosts: redhat_group
   become: true
 
   tasks:
@@ -8,18 +8,23 @@
       ansible.builtin.ping:
 
     - name: Instalar apache
-      ansible.builtin.dnf:
+      ansible.builtin.yum:
         name: httpd
         state: latest
         update_cache: yes
+    
+    - name: Start apache
+      ansible.builtin.service:
+        name: httpd
+        state: started
 
     - name: Instalar mariadb
-      ansible.builtin.dnf:
+      ansible.builtin.yum:
         name: mariadb-server
         state: latest
 
     - name: Desinstalar htop
-      ansible.builtin.dnf:
+      ansible.builtin.yum:
         name: htop
         state: absent
 

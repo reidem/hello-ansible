@@ -1,3 +1,9 @@
 [all]
 debian ansible_host=127.0.0.1 ansible_user=vagrant ansible_port=2222 ansible_private_key_file=/home/tux/hello_ansible/debian/.vagrant/machines/default/virtualbox/private_key
 fedora ansible_host=127.0.0.1 ansible_user=vagrant ansible_port=2200 ansible_private_key_file=/home/tux/hello_ansible/fedora/.vagrant/machines/default/virtualbox/private_key
+
+[debian_group]
+debian
+
+[redhat_group]
+fedora
