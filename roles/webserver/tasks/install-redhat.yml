@@ -2,6 +2,7 @@
   ansible.builtin.yum:
     name: httpd
     state: present
+    update_cache: True
 
 - name: Start apache
   ansible.builtin.service:
