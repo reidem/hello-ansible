@@ -1,5 +1,5 @@
 ---
-- name: Playbook de instalacion de cosas
+- name: Playbook de instalacion de la aplicacion 2048 en un servidor apache
   hosts: all
   become: true
   

@@ -2,8 +2,8 @@
 # tasks file for dbserver
 - name: Ejecucion en debian
   when: ansible_facts['os_family'] == 'Debian'
-  import_tasks: install-debian.yml
+  ansible.builtin.include_tasks: install-debian.yml
 
 - name: Ejecucion en Redhat
   when: ansible_facts['os_family'] == 'RedHat'
-  import_tasks: install-redhat.yml
+  ansible.builtin.include_tasks: install-redhat.yml
