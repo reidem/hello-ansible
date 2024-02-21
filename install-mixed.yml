@@ -1,0 +1,15 @@
+- name: Playbook de instalacion que delega en otros en funcion de la familia del host
+  hosts: all
+  become: True
+  
+  tasks:
+
+    - name: Incluir tareas para la instalacion en Debian
+      ansible.builtin.include_tasks:
+        file: ./install-debian-tasks.yml
+      when: ansible_facts['os_family'] == 'Debian'
+    
+    - name: Incluir tareas para la instalacion en RedHat
+      ansible.builtin.include_tasks:
+        file: ./install-redhat-tasks.yml
+      when: ansible_facts['os_family'] == 'RedHat'
