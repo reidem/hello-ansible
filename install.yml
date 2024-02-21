@@ -2,41 +2,12 @@
 - name: Playbook de instalacion de cosas
   hosts: all
   become: true
+  
+  roles:
+    - 'roles/webserver'
+    - 'roles/dbserver'
 
   tasks:
-    - name: Comprobar conectividad
-      ansible.builtin.ping:
-    
-    - name: Ejecucion en debian
-      when: ansible_facts['os_family'] == 'Debian'
-      block:
-        - name: Instalar apache en debian
-          ansible.builtin.apt:
-            name: apache2
-            state: present
-      
-        - name: Instalar mariadb en Debian
-          ansible.builtin.apt:
-            name: mariadb-server
-            state: present
-
-    - name: Ejecucion en Redhat
-      when: ansible_facts['os_family'] == 'RedHat'
-      block:
-        - name: Instalar apache en Redhat
-          ansible.builtin.yum:
-            name: httpd
-            state: present
-
-        - name: Start apache
-          ansible.builtin.service:
-            name: httpd
-            state: started
-        
-        - name: Instalar mariadb en Redhat
-          ansible.builtin.yum:
-            name: mariadb-server
-            state: present
 
     - name: Aplicar plantilla apache
       ansible.builtin.template:
