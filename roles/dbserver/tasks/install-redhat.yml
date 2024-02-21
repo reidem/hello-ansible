@@ -1,0 +1,4 @@
+- name: Instalar mariadb en Redhat
+  ansible.builtin.yum:
+    name: mariadb-server
+    state: present

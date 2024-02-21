@@ -1,0 +1,4 @@
+- name: Instalar mariaDB en debian
+  ansible.builtin.apt:
+    name: mariadb-server
+    state: present

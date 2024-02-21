@@ -1,0 +1,4 @@
+- name: Instalar apache en debian
+  ansible.builtin.apt:
+    name: apache2
+    state: present

@@ -1,0 +1,9 @@
+- name: Instalar apache en Redhat
+  ansible.builtin.yum:
+    name: httpd
+    state: present
+
+- name: Start apache
+  ansible.builtin.service:
+    name: httpd
+    state: started
