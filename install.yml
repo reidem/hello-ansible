@@ -6,4 +6,6 @@
   roles:
     - 'roles/webserver'
     - 'roles/dbserver'
-    - 'roles/deploy'
+    - role: deploy
+      vars:
+        src_file: /home/tux/Downloads/2048.tar.bz2

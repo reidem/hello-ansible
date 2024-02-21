@@ -2,7 +2,7 @@
 # tasks file for deploy
 - name: Extraer aplicacion 2048
   ansible.builtin.unarchive:
-    src: "/home/tux/Downloads/2048.tar.bz2"
+    src: "{{ src_file }}"
     dest: "/var/www/html"
     owner: root
     group: root
