@@ -1,5 +1,5 @@
 ---
-- name: Playbook de instalacion de cosas
+- name: Playbook de preparacion de servicio web en redhat
   hosts: redhat_group
   become: true
 

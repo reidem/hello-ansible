@@ -6,21 +6,37 @@
   tasks:
     - name: Comprobar conectividad
       ansible.builtin.ping:
+    
+    - name: Ejecucion en debian
+      when: ansible_facts['os_family'] == 'Debian'
+      block:
+        - name: Instalar apache en debian
+          ansible.builtin.apt:
+            name: apache2
+            state: present
+      
+        - name: Instalar mariadb en Debian
+          ansible.builtin.apt:
+            name: mariadb-server
+            state: present
 
-    - name: Instalar apache
-      ansible.builtin.apt:
-        name: apache2
-        state: present
+    - name: Ejecucion en Redhat
+      when: ansible_facts['os_family'] == 'RedHat'
+      block:
+        - name: Instalar apache en Redhat
+          ansible.builtin.yum:
+            name: httpd
+            state: present
 
-    - name: Instalar mariadb
-      ansible.builtin.apt:
-        name: mariadb-server
-        state: present
-
-    - name: Desinstalar htop
-      ansible.builtin.apt:
-        name: htop
-        state: absent
+        - name: Start apache
+          ansible.builtin.service:
+            name: httpd
+            state: started
+        
+        - name: Instalar mariadb en Redhat
+          ansible.builtin.yum:
+            name: mariadb-server
+            state: present
 
     - name: Aplicar plantilla apache
       ansible.builtin.template:
@@ -32,7 +48,7 @@
     
     - name: Extraer aplicacion 2048
       ansible.builtin.unarchive:
-        src: "~/Downloads/2048.zip"
+        src: "/home/tux/Downloads/2048.tar.bz2"
         dest: "/var/www/html"
         owner: root
         group: root

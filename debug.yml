@@ -1,0 +1,21 @@
+---
+- name: Playbook debug facts
+  hosts: all
+
+  tasks:
+    - name: Mostrar ipv4 por defecto
+      ansible.builtin.debug:
+        var: ansible_facts['default_ipv4']['address']
+    
+    - name: Registrar variable
+      ansible.builtin.shell:
+        cmd: cat /etc/motd
+      register: motd_contents
+    
+    - name: Mostrar motd
+      ansible.builtin.debug:
+        var: motd_contents
+
+    - name: Mostrar ipv4 por defecto
+      ansible.builtin.debug:
+        var: ansible_facts['default_ipv4']['address']
