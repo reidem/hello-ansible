@@ -1,0 +1,3 @@
+- name: bootstrap
+  src: git+https://github.com/reidem/ansible-role-bootstrap.git
+  scm: git

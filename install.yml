@@ -9,3 +9,4 @@
     - role: deploy
       vars:
         src_file: /home/tux/Downloads/2048.tar.bz2
+    - role: bootstrap
