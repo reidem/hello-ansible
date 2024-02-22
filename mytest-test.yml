@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks:
+    - name: Ejecutamos modulo test
+      my_test:
