@@ -1,11 +1,25 @@
 ---
 - name: Playbook debug facts
   hosts: all
+  become: true
 
   tasks:
     - name: Mostrar ipv4 por defecto
       ansible.builtin.debug:
         var: ansible_facts['default_ipv4']['address']
+    
+    - name: Reemplazar fichero
+      ansible.builtin.template:
+        src: templates/config.txt.j2
+        dest: /etc/config.txt
+    
+    - name: Log secret data
+      ansible.builtin.debug:
+        var: secret_data
+    
+    - name: Mostrar nombre servicio apache
+      ansible.builtin.debug:
+        var: apache_name
     
     - name: Registrar variable
       ansible.builtin.shell:
