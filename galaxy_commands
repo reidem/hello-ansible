@@ -1,0 +1,16 @@
+  333  ansible-galaxy role search apache
+  338  ansible-galaxy role init -v webserver
+  344  ansible-galaxy role init -v dbserver
+  368  ansible-galaxy role init deploy
+  479  ansible-galaxy collection list
+  480  ansible-galaxy collection search sql
+  481  ansible-galaxy collection list sql
+  482  ansible-galaxy collection list -h
+  491  ansible-galaxy role init -v bootstrap
+  513  ansible-galaxy role install git+https://github.com/reidem/ansible-role-bootstrap.git
+  514  ansible-galaxy role list
+  521  ansible-galaxy role install -r requirements.yml 
+  523  ansible-galaxy role list
+  534  ansible-galaxy role remove ansible-role-bootstrap
+  535* ansible-galaxy role liar
+  542  history | grep ansible-galaxy > galaxy_commands

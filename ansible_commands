@@ -1,0 +1,27 @@
+   16  ansible -m ping
+   17  ansible all -m ping
+   18  ansible all -m ping -i inventory 
+   19  ansible all -m apt -a "upgrade" -i inventory 
+   20  ansible all -m ping -i inventory 
+   21  ansible all -m setup -i inventory 
+   22  ansible all -m a -i inventory > data_vm
+   23  ansible all -m setup -i inventory > data_vm2 
+   76  ansible -i inventory -m setup 
+   77  ansible -i inventory -m setup all
+  116  ansible --version
+  119  ansible -m setup
+  123  ansible --version
+  139  ansible all -m ping
+  140  ansible 10.250.3.3 -m ping
+  413  ansible -m setup -i vbox.pl other
+  427  ANSIBLE_LIBRARY=./library ansible -m my_test localhost
+  428  ansible -m library/my_test localhost
+  453  ansible -m setup 127.0.0.1:2201
+  454  ansible -m setup -i "127.0.0.1:2201"
+  469  ANSIBLE_LIBRARY=./library ansible -m my_test localhost
+  470  ANSIBLE_LIBRARY=./library ansible -m my_test localhost --check
+  471  ANSIBLE_LIBRARY=./library ansible -m my_test localhost --check -vv
+  472  ANSIBLE_LIBRARY=./library ansible -m my_test localhost --check -vvv
+  473  ANSIBLE_LIBRARY=./library ansible -m my_test localhost --check
+  502  ansible lint
+  548  history | grep "ansible " > ansible_commands

@@ -1,0 +1,18 @@
+   39  cd molecule/
+  755  molecule --version
+  761  molecule --version
+  764  molecule
+  765  molecule init --help
+  766  molecule init scenario --driver-name docker -r bootstrap
+  767  molecule init scenario --driver-name docker -r ansible-role-bootstrap
+  773  cd molecule/default/
+  775  cat molecule.yml 
+  779  molecule test
+  780  molecule verify
+  781  molecule create
+  782  molecule verify
+  783  molecule converge
+  784  molecule verify
+  785  cat molecule/default/*
+  786  molecule test
+  860  history | grep molecule > molecule_commands

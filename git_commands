@@ -1,0 +1,108 @@
+  159  git clone https://github.com/reidem/hello-ansible.git
+  173  git statu
+  174  git status
+  177  git status
+  178  git add *
+  180  git commit
+  181  git config --global user.email hctrvf@gmail.com
+  182  git config --global user.name reidem
+  183  git commit
+  184  git push
+  196  git push git@github.com:reidem/hello-ansible.git
+  198  git commit
+  199  git add install.yml 
+  200  git commit
+  201  git push
+  203  git push git@github.com:reidem/hello-ansible.git
+  205  git add install.yml 
+  236  git status
+  237  git add inventory 
+  238  git add install-*
+  239  git status
+  240  git commit
+  241  history | grep git
+  242  git push git@github.com:reidem/hello-ansible.git
+  252  git status
+  253  git add *
+  254  git commit 
+  255  git push git@github.com:reidem/hello-ansible.git
+  308  git status
+  309  git add ansible.cfg 
+  310  git diff install-debian.yml
+  311  git diff install-redhat.yml
+  312  git diff install.yml
+  313  git commit
+  314  git push git@github.com:reidem/hello-ansible.git
+  315  git log
+  316  git status
+  317  git add *
+  318  git commit
+  319  git push git@github.com:reidem/hello-ansible.git
+  320  git status
+  321  git log
+  323  git status
+  324  git push git@github.com:reidem/hello-ansible.git
+  329  git status
+  330  git add *
+  331  git commit
+  332  git push git@github.com:reidem/hello-ansible.git
+  348  git status
+  349  git commit -a
+  350  git status
+  351  git add roles/
+  352  git commit -m
+  353  git ammend
+  354  git commit
+  355  git push git@github.com:reidem/hello-ansible.git
+  357  git status
+  358  git log
+  359  git status
+  360  git diff install
+  361  git diff install.yml
+  363  git add *
+  364  git commit
+  365  git status
+  366  git push git@github.com:reidem/hello-ansible.git
+  379  git status
+  380  git add *
+  381  git commit
+  382  git push git@github.com:reidem/hello-ansible.git
+  384  git status
+  385  git add *
+  386  git commit
+  387  git push git@github.com:reidem/hello-ansible.git
+  388  git status
+  395  git status
+  420  git status
+  421  git add *
+  422  git commit
+  423  git push git@github.com:reidem/hello-ansible.git
+  429  git status
+  430  git add *
+  431  git commit -m "Añadida modulo propio"
+  432  git push git@github.com:reidem/hello-ansible.git
+  485* git status 
+  486  git add
+  487  git add *
+  488  git commit
+  489  git push git@github.com:reidem/hello-ansible.git
+  506  git init
+  507  git status
+  508  git add *
+  509  git commit
+  510  git branch -M main
+  511  git remote add origin git@github.com:reidem/ansible-role-bootstrap.git
+  512  git push -u origin main
+  513  ansible-galaxy role install git+https://github.com/reidem/ansible-role-bootstrap.git
+  524  git status
+  525  git diff library
+  526  git diff library/*
+  527  git diff install.yml
+  528  git add *
+  529  git status
+  530  git add library
+  531  git add mytest-test.yml 
+  532  git status
+  533  git commit 
+  536  git push git@github.com:reidem/hello-ansible.git
+  551  history | grep git > git_commands

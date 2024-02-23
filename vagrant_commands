@@ -1,0 +1,73 @@
+  127  vagrant --version
+  128  vagrant init debian/bookworm12
+  132  vagrant up
+  134  vagrant up
+  138  vagrant ssh
+  142  vagrant ssh
+  144  vagrant ssh config
+  145  vagrant ssh-config
+  147  vagrant ssh
+  214  vagrant box
+  215  vagrant status
+  216  vagrant box list
+  217  history | grep vagrant
+  218  vagrant init bento/fedora-39
+  219  vagran up
+  220  vagrant up
+  221  vagrant ssh
+  222  vagrant
+  223  vagrant reload
+  233  vagrant status
+  234  vagrant global-status
+  243  vagrant global-status
+  244  vagrant status fc935fc
+  245  vagrant info
+  246  vagrant ssh-config
+  249  vagrant ssh-config
+  257  vagrant ssh
+  263  vagrant ssh
+  268  vagrant ssh
+  272  vagrant ssh
+  275  ls -la .vagrant/
+  276  ls -la .vagrant/machines/default/virtualbox/
+  277  ls -la .vagrant/machines/default/virtualbox/private_key 
+  278  vagrant ssh-config
+  280  vagrant destroy
+  281  vagrant up
+  282  vagrant ssh-config
+  288  vagrant up
+  290  vagrant up
+  301  vagrant status
+  302  vagrant ssh-config
+  373  vagrant ip-config
+  374  vagrant ssh
+  375  vagrant destroy
+  376  vagrant up
+  390  vagrant destroy
+  391  vagrant up
+  401  vagrant box list
+  402  vagrant box list -i
+  403  vagrant
+  404  vagrant status
+  405  vagrant global-status
+  406  vagrant status 5e2b33a
+  407  vagrant status 5e2b33a -i
+  433  vagrant box list
+  435  vagrant destroy
+  436  vagrant up
+  442  vagrant init
+  446  history | grep vagrant
+  447  vagrant up
+  449  vagrant box list
+  450  vagrant init bento/centos-8
+  452  vagrant up
+  456  vagrant destroy
+  457  vagrant box list
+  458  vagrant init debian/bookworm64
+  460  vagrant init debian/bookworm64
+  461  vagrant up
+  462  vagrant ssh-config
+  463  vagrant ssh
+  465  vagrant reload
+  466  vagrant ssh
+  553  history | grep vagran > vagrant_commands
